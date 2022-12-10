@@ -92,3 +92,5 @@ SELECT AVG(escape_attempts) avg_escape_attempts,
 FROM animals
 WHERE TO_CHAR(date_of_birth, 'YYYY') BETWEEN '1990' AND '2000'
 GROUP BY species;
+
+/*Milestone 03*/

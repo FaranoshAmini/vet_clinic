@@ -89,3 +89,5 @@ INSERT INTO animals (
         weight_kg
     )
 VALUES ('Ditto', '2022-05-14', 5, True, 22);
+
+/*Milestone 03*/

@@ -15,3 +15,4 @@ ADD species varchar(255);
 
 /*Milestone 03*/
 CREATE TABLE owners(id INT GENERATED ALWAYS AS IDENTITY, full_name   VARCHAR(100), age  INT, PRIMARY KEY(id));
+CREATE TABLE species(id INT GENERATED ALWAYS AS IDENTITY, name VARCHAR(100), PRIMARY KEY(id));
