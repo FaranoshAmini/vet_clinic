@@ -33,3 +33,6 @@ ALTER TABLE animals
 ADD owner_id INT;
 ALTER TABLE animals
 ADD FOREIGN KEY (owner_id) REFERENCES owners (id);
+
+/*Milestone 04*/
+CREATE TABLE vets(id INT GENERATED ALWAYS AS IDENTITY, name VARCHAR(100), age INT, date_of_graduation  DATE, PRIMARY KEY(id));
