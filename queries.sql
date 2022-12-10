@@ -27,32 +27,31 @@ WHERE name <> 'Gabumon';
 SELECT *
 FROM animals
 WHERE weight_kg BETWEEN 10.4 AND 17.3;
-
 /* Milestone 02*/
-
 -- TRANSACTION 01
+BEGIN;
+UPDATE animals
+SET species = 'unspecified';
+SELECT *
+FROM animals;
+ROLLBACK;
+-- TRANSACTION 02
+BEGIN;
+UPDATE animals
+SET species = 'digimon'
+WHERE name LIKE '%mon';
+UPDATE animals
+SET species = 'pokemon'
+WHERE species IS NULL;
+COMMIT;
+SELECT *
+FROM animals;
+-- TRANSACTION 03
 
 BEGIN;
 
-UPDATE animals
-SET species = 'unspecified';
+DELETE FROM animals;
 
 SELECT * FROM animals;
 
 ROLLBACK;
-
--- TRANSACTION 02
-
-BEGIN;
-
-UPDATE animals
-SET species = 'digimon'
-WHERE name LIKE '%mon';
-
-UPDATE animals
-SET species = 'pokemon'
-WHERE species IS NULL;
-
-COMMIT;
-
-SELECT * FROM animals;
