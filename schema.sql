@@ -12,3 +12,6 @@ CREATE TABLE animals (
 /* Milestone 02*/
 ALTER TABLE animals
 ADD species varchar(255);
+
+/*Milestone 03*/
+CREATE TABLE owners(id INT GENERATED ALWAYS AS IDENTITY, full_name   VARCHAR(100), age  INT, PRIMARY KEY(id));
