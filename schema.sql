@@ -9,6 +9,6 @@ CREATE TABLE animals (
     weight_kg DECIMAL,
     PRIMARY KEY(id)
 );
-
 /* Milestone 02*/
-ALTER TABLE animals ADD species varchar(255);
+ALTER TABLE animals
+ADD species varchar(255);
