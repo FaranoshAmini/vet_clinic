@@ -58,3 +58,5 @@ COMMIT;
 
 -- Queries
 SELECT COUNT(*) total_animals FROM animals;
+SELECT COUNT(*) total_animals FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg) avg_weight FROM animals;
