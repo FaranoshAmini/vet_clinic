@@ -3,16 +3,17 @@
 SELECT *
 FROM animals
 WHERE name LIKE '%mon';
-SELECT *
+SELECT name
 FROM animals
-WHERE date_of_birth BETWEEN '01-01-2016' AND '12-12-2019';
+WHERE date_of_birth BETWEEN '01-01-2016' AND '12-31-2019';
 SELECT name
 FROM animals
 WHERE neutered = True
     AND escape_attempts < 3;
 SELECT date_of_birth
 FROM animals
-WHERE name NOT IN ('Agumon', 'Pikachu');
+WHERE name = 'Pikachu'
+    OR name = 'Agumon';
 SELECT name,
     escape_attempts
 FROM animals
@@ -22,7 +23,7 @@ FROM animals
 WHERE neutered = true;
 SELECT *
 FROM animals
-WHERE name = 'Gabumon';
+WHERE name <> 'Gabumon';
 SELECT *
 FROM animals
 WHERE weight_kg BETWEEN 10.4 AND 17.3;
