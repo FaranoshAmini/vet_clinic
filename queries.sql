@@ -41,3 +41,11 @@ SELECT * FROM animals;
 
 ROLLBACK;
 
+-- TRANSACTION 02
+
+BEGIN;
+
+UPDATE animals
+SET species = 'digimon'
+WHERE name LIKE '%mon';
+
