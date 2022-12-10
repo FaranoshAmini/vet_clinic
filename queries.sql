@@ -53,3 +53,4 @@ BEGIN;
 
 DELETE FROM animals WHERE TO_CHAR(date_of_birth,'YYYY-MON-DD') > '2022-JAN-01';
 SAVEPOINT SP1;
+UPDATE animals SET weight_kg = weight_kg*-1;
