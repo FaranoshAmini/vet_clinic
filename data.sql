@@ -1,12 +1,6 @@
 /* Populate database with sample data. */
 /*Milestone 01 */
-INSERT INTO animals (
-        name,
-        date_of_birth,
-        escape_attempts,
-        neutered,
-        weight_kg
-    )
+INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
 VALUES ('Agumon', '2020-02-03', 0, True, 10.23);
 INSERT INTO animals (
         name,
@@ -15,7 +9,7 @@ INSERT INTO animals (
         neutered,
         weight_kg
     )
-VALUES ('Gabumon', '2018-11-15', 2, True, 8)
+VALUES ('Gabumon', '2018-11-15', 2, True, 8);
 INSERT INTO animals (
         name,
         date_of_birth,

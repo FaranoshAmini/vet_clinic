@@ -30,28 +30,26 @@ WHERE weight_kg BETWEEN 10.4 AND 17.3;
 /* Milestone 02*/
 -- TRANSACTION 01
 BEGIN;
-UPDATE animals
-SET species = 'unspecified';
+UPDATE animals SET species = 'unspecified';
 SELECT *
 FROM animals;
 ROLLBACK;
 -- TRANSACTION 02
 BEGIN;
-UPDATE animals
-SET species = 'digimon'
-WHERE name LIKE '%mon';
-UPDATE animals
-SET species = 'pokemon'
-WHERE species IS NULL;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
 COMMIT;
 SELECT *
 FROM animals;
 -- TRANSACTION 03
+BEGIN;
+DELETE FROM animals;
+SELECT *
+FROM animals;
+ROLLBACK;
+-- TRANSACTION 04
 
 BEGIN;
 
-DELETE FROM animals;
-
-SELECT * FROM animals;
-
-ROLLBACK;
+DELETE FROM animals WHERE TO_CHAR(date_of_birth,'YYYY-MON-DD') > '2022-JAN-01';
+SAVEPOINT SP1;
