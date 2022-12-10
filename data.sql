@@ -103,3 +103,10 @@ INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
 -- Species Information
 INSERT INTO species(name) VALUES ('Digimon');
 INSERT INTO species(name) VALUES ('Pokemon');
+
+-- Updations
+
+-- OWNER'S UPDATIONS
+
+UPDATE animals SET species_id = 1 WHERE name LIKE '%mon';
+UPDATE animals SET species_id = 2 WHERE name NOT LIKE '%mon';
