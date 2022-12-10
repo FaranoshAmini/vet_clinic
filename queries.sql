@@ -27,3 +27,17 @@ WHERE name <> 'Gabumon';
 SELECT *
 FROM animals
 WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+/* Milestone 02*/
+
+-- TRANSACTION 01
+
+BEGIN;
+
+UPDATE animals
+SET species = 'unspecified';
+
+SELECT * FROM animals;
+
+ROLLBACK;
+
